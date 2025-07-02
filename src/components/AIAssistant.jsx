@@ -12,7 +12,8 @@ import {
   X,
   Minimize2,
   Maximize2,
-  RefreshCw
+  RefreshCw,
+  Image
 } from 'lucide-react'
 
 const AIAssistant = () => {
@@ -23,6 +24,8 @@ const AIAssistant = () => {
       id: 1,
       type: 'bot',
       content: "Hi! I'm Keshavraj's AI assistant. I can help you learn more about his skills, projects, and experience. What would you like to know?",
+      meme: "https://i.imgflip.com/1g8my4.jpg",
+      memeAlt: "Drake pointing - Hi there!",
       timestamp: new Date()
     }
   ])
@@ -38,57 +41,118 @@ const AIAssistant = () => {
   ]
 
   const responses = {
-    skills: `🧠 Keshavraj's Skill-o-meter is off the charts!
+    skills: {
+      text: `🧠 Keshavraj's Skill-o-meter is off the charts!
 
 💻 Code Whisperer: Python 🐍, JavaScript ☕, TypeScript 🤓, SQL 🔥
 📊 Data Detective: Pandas (not the zoo ones 🐼), NumPy, Matplotlib (art with data!), Power BI & Tableau — turning numbers into WOWs
 🗄️ DB Ninja: MySQL, PostgreSQL, MongoDB — speaks fluent table-ese
 🌍 Web Chef: Bakes React and Node.js into delicious full-stack recipes 🍰
 🧠 ML Tinkerer: TensorFlow, Scikit-learn — teaching machines to think harder than your ex ever did
-🔧 Toolbox Jedi: Git, Docker, AWS, Linux — may or may not fix your life too
+🔧 Toolbox Jedi: Git, Docker, AWS — may or may not fix your life too
 
 Special Attack: SQL + Data Analytics — catch his Marathi tech sorcery on YouTube! 🎥🔥`,
+      meme: "https://i.imgflip.com/8agixy.jpg",
+      memeAlt: "Galaxy Brain - My coding skills expanding"
+    },
 
-    projects: `🚀 Keshavraj's Project Zoo (No animals harmed, just codes unleashed):
+    projects: {
+      text: `🚀 Keshavraj's Project Dhamaka 💥
 
-🏥 Healthcare Predictor 9000 — Saves lives (almost like a doctor, minus the stethoscope)
-🧠 MCP Servers — Robots talking to robots, and somehow it works
-📈 Real-Time Dashboard — Because boring charts are so 2005
-🎓 SQL Learning App — Teaches SQL in Marathi, because SELECT * FROM Education WHERE language = 'fun'
+💉 Healthcare Predictor
+Symptom daalo, bimari ka naam pao — AI-powered system for disease prediction based on symptoms. Doctor uncle before Doctor Uncle 😎
 
-👨‍💻 P.S. All these wonders live on his GitHub — auto-updated, no reboots required!`,
+🧠 MCP (Modular Command Platform) Servers
+"Bhai, bas bolna hai – kaam ho jayega."
+Automates Gmail sending, file uploads, GitHub commits, WhatsApp messages and more using Cloud AI prompts.
+Use Case: "I want to mail to HR for job" → ✅ Auto email sent.
+Even builds repos for you on GitHub bro. No kidding.
 
-    experience: `🎯 Keshavraj's XP Bar (a.k.a. resume with flavor):
+📊 Real-Time Dashboard with Power BI
+Because static graphs = 2005 vibes
+Dynamic dashboards for live data insights. Present like a CEO, not a spreadsheet monkey 🧑‍💼📈
+
+🧑‍🏫 SQL Learning App (In Marathi)
+SELECT * FROM Education WHERE language = 'fun'
+India’s first SQL learning app in Marathi!
+Track your video progress, learn at your pace, aur sab kuch localStorage mein saved hai.
+
+🌐 AI-Infused Portfolio Website
+Not your boring resume
+Integrates your GitHub repos live, YouTube videos (Marathi SQL series), and even real-time stats:
+
+👨‍💻 GitHub Repos: 33+
+
+📺 YouTube Subscribers: 600+
+
+🧠 Courses Created: Free SQL + more
+`,
+      meme: "https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/8689467/gatsby.gif?quality=90&strip=all&crop=18.78125%2C0%2C62.4375%2C100&w=1080",
+      memeAlt: "Success Kid - Finished another project!"
+    },
+
+    experience: {
+      text: `🎯 Keshavraj's XP Bar (a.k.a. resume with flavor):
 
 🎓 Degree Mode: B.E in A.I. & Data Science — leveled up with a 7.8 CGPA
-🏆 Quest Rewards: Smart India Hackathon loot x2, IEEE Boss Fight Winner
-🧾 Certifications Unlocked: SQL Wizard 🧙‍♂️, Data Science Explorer, HackerRank Star Collector ⭐⭐🌟🌠
+🏆 Quest Rewards: Smart India Hackathon loot x2 selected college level
+🧾 Certifications Unlocked: SQL Wizard 🧙‍♂️, Data Science Explorer, HackerRank Star Collector in sql, python⭐⭐🌟🌠
 🎥 Side Quest: Runs a Marathi EdTech Channel (600+ subscribers and growing like a well-watered cactus)
 💼 Current Mission: Data Analytics Specialist — doing Machine Learning and Business Intelligence like a tech-sorcerer
 
 Secret Power: Explaining hard things in simple (and often funny) ways.`,
+      meme: "https://resources.workable.com/wp-content/uploads/2023/07/Candidate-Meme.jpeg",
+      memeAlt: "Distracted Boyfriend - Me looking at new tech vs my current stack"
+    },
 
-    contact: `📬 Want to summon Keshavraj?
+    contact: {
+      text: `📬 Want to contact with Keshavraj?
 
-📧 Owl Mail: keshavraj_pore@example.com
-📱 Bat-Signal: +91 7378564044
+📧 Mail: poreg79@example.com
+📱 phone no.: +91 7378564044
 🐙 Code Lair: github.com/Keshavraj52
-🎥 YouTube Spells: @Keshavrajpore
-💼 LinkedIn Realm: linkedin.com/in/keshavrajpore
-📍 Basecamp: Pune, Maharashtra (India's data dojo 🇮🇳)
+🎥 YouTube: @Keshavrajpore
+💼 LinkedIn: https://www.linkedin.com/in/keshavraj-pore-b33873257/
+📍 location: Pune, Maharashtra (India's data dojo 🇮🇳)
 
 DMs open for data chats, collabs, or discussing why pie charts are overrated.`,
+      meme: "https://i.imgflip.com/1ur9b0.jpg",
+      memeAlt: "Leonardo DiCaprio Cheers - Cheers to connecting!"
+    },
 
-    intro: `⏱️ 30-Second Elevator Pitch (in case you're stuck with him in a lift):
+    intro: {
+      text: `⏱️ 30-Second Elevator Pitch (in case you're stuck with him in a lift):
 
-"Hey there! I'm Keshavraj Pore — part human, part data-nerd, and full-time knowledge ninja from Pune.
-I study Artificial Intelligence and Data Science (and yes, I do talk to machines daily).
-Specializing in SQL (the love of my life), Data Analytics, and the MEAN Stack (not as angry as it sounds).
-I've been to internal hackathons, survived Smart India Hackathon twice (2023 & 2024), and training to slay 2025 like a pro.
-Also, I teach in Marathi on YouTube because tech gyaan should be desi too!
-Let's decode the universe — one dataset at a time!"
+"Hi, I'm Keshavraj Pore - an AI & Data Science enthusiast from Pune who's passionate about turning data into insights. I specialize in SQL, Data Analytics, and MEAN Stack development, with hands-on experience from multiple hackathons including Smart India Hackathon 2023 & 2024. When I'm not coding or analyzing datasets, you'll find me creating educational content in Marathi on YouTube, making tech accessible to everyone."
 
-(Also available in serious mode on request 😄)`
+(Also available in serious mode on request 😄)`,
+      meme: "https://media.tenor.com/M0895TLTfZkAAAAM/this-is-my-introduction-tank.gif",
+      memeAlt: "this is my introduction"
+    }
+  }
+
+  // Additional meme responses for specific keywords
+  const specialMemes = {
+    sql: {
+      text: "💾 SQL Superpowers Alert!: Keshavraj doesn't just write SQL — he *whispers* to databases and they give him the data willingly. Also, he teaches SQL in Marathi on YouTube — because even databases deserve regional love. 💙📊",
+      meme: "https://i.imgflip.com/26am.jpg",
+      memeAlt: "Philosoraptor - What if SQL was actually a love language?"
+    },
+    youtube: {
+      text: "🎬 Welcome to the Marathi Nerd Network™! Keshavraj runs a growing YouTube channel with 600+ amazing humans where he drops knowledge bombs on SQL, data analytics, and code stuff — all in Marathi! It's like watching Netflix... but instead of drama, you get data. 🔥",
+      meme: "https://i.imgflip.com/1ihzfe.jpg",
+      memeAlt: "Surprised Pikachu - When you realize learning can be fun!"
+    },
+    hackathon: {
+      text: "🥇 Keshavraj is basically a professional hackathon warrior (think coder + gladiator 🥷💻):\n\n• Smart India Hackathon 2023 – Cracked internal healthcare with code. First Place! 🏥💡\n• TechFest Mumbai – Built web magic, bagged Runner Up! 🧙‍♂️🌐\n• Final year project? More like final boss fight – and I Will Do My Best! 🏆⚔️\n\nHe loves turning Red Bulls into real-world solutions!",
+      meme: "https://i.imgflip.com/1g8my4.jpg",
+      memeAlt: "Drake pointing - Hackathons are life!"
+    },
+    default: {
+      text: "I'd be happy to help! You can explore different sections of this website to learn more about Keshavraj's background, or try asking about his skills, projects, experience, or contact information.",
+      meme: "https://i.imgflip.com/1otk96.jpg",
+      memeAlt: "Distracted Boyfriend - Me trying to help you find the right info"
+    }
   }
 
   const handleSendMessage = async () => {
@@ -102,15 +166,15 @@ Let's decode the universe — one dataset at a time!"
     }
 
     setMessages(prev => [...prev, userMessage])
+    const query = inputValue.toLowerCase()
     setInputValue('')
     setIsTyping(true)
 
     // Simulate AI thinking time
     setTimeout(() => {
-      const query = inputValue.toLowerCase()
-      let response = "I'd be happy to help! You can explore different sections of this website to learn more about Keshavraj's background, or try asking about his skills, projects, experience, or contact information."
+      let response = specialMemes.default
 
-      // Simple keyword matching for responses
+      // Check for main categories first
       for (const [key, value] of Object.entries(responses)) {
         if (query.includes(key) || query.includes(key.slice(0, -1))) {
           response = value
@@ -118,19 +182,21 @@ Let's decode the universe — one dataset at a time!"
         }
       }
 
-      // Additional keyword matching
+      // Check for special keywords
       if (query.includes('sql') || query.includes('database')) {
-        response = responses.skills + "\n\n💾 SQL Superpowers Alert!: Keshavraj doesn't just write SQL — he *whispers* to databases and they give him the data willingly. Also, he teaches SQL in Marathi on YouTube — because even databases deserve regional love. 💙📊"
+        response = specialMemes.sql
       } else if (query.includes('youtube') || query.includes('video') || query.includes('marathi')) {
-        response = "🎬 Welcome to the Marathi Nerd Network™! Keshavraj runs a growing YouTube channel with 600+ amazing humans where he drops knowledge bombs on SQL, data analytics, and code stuff — all in Marathi! It's like watching Netflix... but instead of drama, you get data. 🔥"
+        response = specialMemes.youtube
       } else if (query.includes('hackathon') || query.includes('competition')) {
-        response = "🥇 Keshavraj is basically a professional hackathon warrior (think coder + gladiator 🥷💻):\n\n• Smart India Hackathon 2023 – Cracked internal healthcare with code. First Place! 🏥💡\n• TechFest Mumbai – Built web magic, bagged Runner Up! 🧙‍♂️🌐\n• Final year project? More like final boss fight – and i Will Do My Best! 🏆⚔️\n\nHe loves turning Red Bulls into real-world solutions!"
+        response = specialMemes.hackathon
       }
 
       const botMessage = {
         id: Date.now() + 1,
         type: 'bot',
-        content: response,
+        content: response.text,
+        meme: response.meme,
+        memeAlt: response.memeAlt,
         timestamp: new Date()
       }
 
@@ -152,6 +218,8 @@ Let's decode the universe — one dataset at a time!"
         id: 1,
         type: 'bot',
         content: "Hi! I'm Keshavraj's AI assistant. I can help you learn more about his skills, projects, and experience. What would you like to know?",
+        meme: "https://i.imgflip.com/1g8my4.jpg",
+        memeAlt: "Drake pointing - Hi there!",
         timestamp: new Date()
       }
     ])
@@ -257,6 +325,21 @@ Let's decode the universe — one dataset at a time!"
                         ? 'bg-gradient-to-br from-blue-500 to-indigo-500 text-white rounded-br-md' 
                         : 'bg-white border border-gray-200 rounded-bl-md'
                     }`}>
+                      
+                      {/* Meme Image (only for bot messages) */}
+                      {message.type === 'bot' && message.meme && (
+                        <div className="mb-3 rounded-lg overflow-hidden bg-gray-100">
+                          <img 
+                            src={message.meme} 
+                            alt={message.memeAlt || "Meme"}
+                            className="w-full h-auto max-h-48 object-contain"
+                            onError={(e) => {
+                              e.target.style.display = 'none'
+                            }}
+                          />
+                        </div>
+                      )}
+                      
                       <p className="text-sm leading-relaxed whitespace-pre-line break-words">
                         {message.content}
                       </p>

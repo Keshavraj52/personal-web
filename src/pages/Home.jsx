@@ -92,9 +92,21 @@ useEffect(() => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/20">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover opacity-85 z-0"
+  >
+    <source src="/3Dcolor.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
+            
             <div className="space-y-8">
               <div className="space-y-4">
                 {/* <Badge variant="secondary" className="w-fit">
