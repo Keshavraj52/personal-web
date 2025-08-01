@@ -42,14 +42,36 @@ const AIAssistant = () => {
 
   const responses = {
     skills: {
-      text: `🧠 Keshavraj's Skill-o-meter is off the charts!
+      text: `🐍 Python (a.k.a. My Spirit Animal)
+Whether it’s building AI apps, web automation using Selenium, wrangling data like a cowboy with Pandas, or painting pretty graphs with Matplotlib — Python and I go together like chai and coding nights.
+Bonus: DSA and OOP? I don’t just learn them — I debug them in my dreams.
 
-💻 Code Whisperer: Python 🐍, JavaScript ☕, TypeScript 🤓, SQL 🔥
-📊 Data Detective: Pandas (not the zoo ones 🐼), NumPy, Matplotlib (art with data!), Power BI & Tableau — turning numbers into WOWs
-🗄️ DB Ninja: MySQL, PostgreSQL, MongoDB — speaks fluent table-ese
-🌍 Web Chef: Bakes React and Node.js into delicious full-stack recipes 🍰
-🧠 ML Tinkerer: TensorFlow, Scikit-learn — teaching machines to think harder than your ex ever did
-🔧 Toolbox Jedi: Git, Docker, AWS — may or may not fix your life too
+🌐 Web Technologies – The Internet Runs on My Stack
+HTML & CSS: Built with more care than a Diwali rangoli.
+Angular & TypeScript: For when I want my front end spicy and structured.
+Node.js & Express.js: Because backend APIs shouldn’t behave like Indian government websites.
+
+TL;DR: I speak MEAN fluently — MongoDB to Angular and everything in between.
+
+🛢️ MySQL – The SQLon of my Database Empire
+I don’t just query — I optimize, normalize, and sometimes dramatize (with cool joins and subqueries).
+Fun Fact: I created an entire free SQL course on YouTube, because why not teach while you learn?
+
+🤖 AI Tools – Automation, Meet Ambition
+ChatGPT & Claude AI: My co-pilots in coding, writing emails, or just surviving semester project deadlines.
+
+AI Studio: Because building AI stuff feels cooler when the UI looks futuristic.
+
+GitHub Copilot: It writes, I supervise. We’re a good team.
+
+🔧 Misc. Tools – The Secret Sauce
+Streamlit – Making boring dashboards feel like interactive Netflix interfaces.
+
+Flask – For quick web apps, faster than maggi.
+
+Pickle – Not for lunch, but perfect for saving models.
+
+JSON – My go-to gossip format between frontend and backend.
 
 Special Attack: SQL + Data Analytics — catch his Marathi tech sorcery on YouTube! 🎥🔥`,
       meme: "https://i.imgflip.com/8agixy.jpg",
@@ -57,63 +79,85 @@ Special Attack: SQL + Data Analytics — catch his Marathi tech sorcery on YouTu
     },
 
     projects: {
-      text: `🚀 Keshavraj's Project Dhamaka 💥
+      text: `🏛️ Enterprise-Grade University Workflow Automation (Final Year Project)
+Tech Stack: LLMs, Python, Claude AI, MCP (Model Context Protocol)
+What It Does: Imagine a university where forms don’t get lost, approvals don’t take a semester, and AI politely bosses everyone around — that’s this project. It uses LLMs like Claude to automate the academic workflow while your professors wonder if you're the next Elon of EduTech.
+Fun Bit: MCP here doesn’t mean “My College Problem,” but solves quite a few of them!
 
-💉 Healthcare Predictor
-Symptom daalo, bimari ka naam pao — AI-powered system for disease prediction based on symptoms. Doctor uncle before Doctor Uncle 😎
+🌐 Portfolio Website (But Make It Smart)
+What’s Inside: YouTube bot, GitHub repos, AI Quiz Bot, SQL gamified zone, and a museum of your future automation tools (yes, future — because why limit yourself?).
+Tech Stack: HTML, CSS, creativity, and a sprinkle of ambition.
+Link: keshavrajpore.netlify.app
+Tagline: “Not just a portfolio — it’s a coding carnival!”
 
-🧠 MCP (Modular Command Platform) Servers
-"Bhai, bas bolna hai – kaam ho jayega."
-Automates Gmail sending, file uploads, GitHub commits, WhatsApp messages and more using Cloud AI prompts.
-Use Case: "I want to mail to HR for job" → ✅ Auto email sent.
-Even builds repos for you on GitHub bro. No kidding.
+🎙️ Voice-Based Billing System (Because Typing is Overrated)
+Tech Stack: Python, Streamlit
+What It Does: Speak your items out loud — this app hears you, tallies up your groceries like your local kirana uncle, and spits out a bill PDF — no arguments, no spelling errors.
+Bonus: Integrated UPI payment! Just say “bhaiya, total kitna?” and boom — it’s paid.
 
-📊 Real-Time Dashboard with Power BI
-Because static graphs = 2005 vibes
-Dynamic dashboards for live data insights. Present like a CEO, not a spreadsheet monkey 🧑‍💼📈
+🧠 Virtusa Technology Orientation for Faculty (VTOF)
+Tech Stack: Angular, HTML, CSS, JSON
+Project Story: While others were still figuring out semicolons, you were building a web interface for a financial company. This got you a certificate and a fan club of confused-but-happy professors.
+Slogan: Educating the educators — like a boss!
 
-🧑‍🏫 SQL Learning App (In Marathi)
-SELECT * FROM Education WHERE language = 'fun'
-India’s first SQL learning app in Marathi!
-Track your video progress, learn at your pace, aur sab kuch localStorage mein saved hai.
+🤒 Disease Prediction & Cure (Your Personal Dr. Python)
+Tech Stack: Flask, SVC, Pandas, NumPy, HTML/CSS
+Pitch: Feeling under the weather? Just enter your symptoms and let this ML model play House M.D. on your behalf.
+Cool Twist: You even pickled the model — not in vinegar, but using Python's pickle module.
 
-🌐 AI-Infused Portfolio Website
-Not your boring resume
-Integrates your GitHub repos live, YouTube videos (Marathi SQL series), and even real-time stats:
+📦 MEAN Stack CRUD Application (CRUD = Code Rules Until Deployment)
+Tech Stack: MongoDB, Express.js, Angular, Node.js
+Overview: A fully functional CRUD app — because real developers don’t just “read-only.”
+What You Proved: That you're MEAN — in a full-stack, not grumpy, way.
 
-👨‍💻 GitHub Repos: 33+
+🏆 And the Trophy Shelf Says...
+🥇 Winner @ Vertexo 4.0
 
-📺 YouTube Subscribers: 600+
+🥈 Runner-Up @ PCCOE’s Spectrum 2023
 
-🧠 Courses Created: Free SQL + more
+🥉 3rd Prize @ DYPIEMR’s Model Demonstration
 `,
       meme: "https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/8689467/gatsby.gif?quality=90&strip=all&crop=18.78125%2C0%2C62.4375%2C100&w=1080",
       memeAlt: "Success Kid - Finished another project!"
     },
 
     experience: {
-      text: `🎯 Keshavraj's XP Bar (a.k.a. resume with flavor):
+      text: `💼 Professional Experience
+Frontend Developer Intern
+Microdream Software Consultancy, Pune
+Dec 2024 – Feb 2025 | Pune, India
 
-🎓 Degree Mode: B.E in A.I. & Data Science — leveled up with a 7.8 CGPA
-🏆 Quest Rewards: Smart India Hackathon loot x2 selected college level
-🧾 Certifications Unlocked: SQL Wizard 🧙‍♂️, Data Science Explorer, HackerRank Star Collector in sql, python⭐⭐🌟🌠
-🎥 Side Quest: Runs a Marathi EdTech Channel (600+ subscribers and growing like a well-watered cactus)
-💼 Current Mission: Data Analytics Specialist — doing Machine Learning and Business Intelligence like a tech-sorcerer
+During my internship, I worked on the development and enhancement of web-based interfaces using Angular and Angular Material. I was actively involved in:
 
-Secret Power: Explaining hard things in simple (and often funny) ways.`,
+Designing responsive and user-friendly web pages using HTML, CSS, and TypeScript.
+
+Contributing to the frontend architecture of enterprise-grade applications using Angular.
+
+Implementing interactive UI components and integrating APIs for dynamic data rendering.
+
+Collaborating with the backend team to optimize MySQL queries and ensure smooth data flow.
+
+This internship not only sharpened my skills in frontend technologies but also gave me practical exposure to full-stack collaboration and real-world development workflows.`,
       meme: "https://resources.workable.com/wp-content/uploads/2023/07/Candidate-Meme.jpeg",
       memeAlt: "Distracted Boyfriend - Me looking at new tech vs my current stack"
     },
 
     contact: {
-      text: `📬 Want to contact with Keshavraj?
+      text: `📍 Location: Akurdi, Pune, India
 
-📧 Mail: poreg79@example.com
-📱 phone no.: +91 7378564044
-🐙 Code Lair: github.com/Keshavraj52
-🎥 YouTube: @Keshavrajpore
-💼 LinkedIn: https://www.linkedin.com/in/keshavraj-pore-b33873257/
-📍 location: Pune, Maharashtra (India's data dojo 🇮🇳)
+📧 Email: poreg79@gmail.com
+
+📱 Mobile: +91 7378564044
+
+🌐 Portfolio: keshavrajpore.netlify.app
+
+🔗 LinkedIn: linkedin.com/in/keshavraj-pore-b33873257
+
+💻 GitHub: github.com/Keshavraj52
+
+📹 YouTube: @Keshavrajpore
+
+🧠 LeetCode: Keshavraj_52
 
 DMs open for data chats, collabs, or discussing why pie charts are overrated.`,
       meme: "https://i.imgflip.com/1ur9b0.jpg",
@@ -121,10 +165,14 @@ DMs open for data chats, collabs, or discussing why pie charts are overrated.`,
     },
 
     intro: {
-      text: `⏱️ 30-Second Elevator Pitch (in case you're stuck with him in a lift):
+      text: `👋 Introduction
+Hello! I'm Keshavraj Pore, an enthusiastic and growth-driven final-year B.E. student specializing in Artificial Intelligence and Data Science. I’m passionate about building smart, scalable, and user-friendly solutions using technologies like Python, Angular, and the MEAN stack.
 
-"Hi, I'm Keshavraj Pore - an AI & Data Science enthusiast from Pune who's passionate about turning data into insights. I specialize in SQL, Data Analytics, and MEAN Stack development, with hands-on experience from multiple hackathons including Smart India Hackathon 2023 & 2024. When I'm not coding or analyzing datasets, you'll find me creating educational content in Marathi on YouTube, making tech accessible to everyone."
+From leading teams in the Smart India Hackathon to crafting voice-controlled billing apps and AI-powered automation systems, I enjoy turning complex problems into elegant code — and occasionally into YouTube tutorials too!
 
+With hands-on experience through internships and personal projects, I'm always curious about learning new tools (especially AI ones!) and contributing meaningfully to tech communities. Whether it's solving LeetCode challenges, deploying apps, or mentoring others through my free SQL course, I strive to balance learning, leading, and creating.
+
+I’m currently seeking opportunities where I can apply my skills, learn from real-world challenges, and grow as a well-rounded software professional.
 (Also available in serious mode on request 😄)`,
       meme: "https://media.tenor.com/M0895TLTfZkAAAAM/this-is-my-introduction-tank.gif",
       memeAlt: "this is my introduction"

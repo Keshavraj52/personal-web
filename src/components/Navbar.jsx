@@ -16,6 +16,7 @@ const Navbar = () => {
     { path: '/youtube', label: 'YouTube', icon: Youtube },
     { path: '/sql-learning', label: 'SQL Learning', icon: Database },
     { path: '/mcp-servers', label: 'MCP Servers', icon: Server },
+    {path: '/quiz-generator', label: 'Quiz Generator', icon: Code },
     { path: '/about', label: 'About', icon: User },
   ]
 

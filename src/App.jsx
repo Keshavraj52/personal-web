@@ -9,6 +9,7 @@ import Achievements from './pages/Achievements'
 import YouTube from './pages/YouTube'
 import SQLLearning from './pages/SQLLearning'
 import MCPServers from './pages/MCPServers'
+import QuizGenerator from './pages/quizgen'
 import About from './pages/About'
 import './App.css'
 
@@ -26,6 +27,7 @@ function App() {
               <Route path="/youtube" element={<YouTube />} />
               <Route path="/sql-learning" element={<SQLLearning />} />
               <Route path="/mcp-servers" element={<MCPServers />} />
+              <Route path='/quiz-generator' element={<QuizGenerator />} />
               <Route path="/about" element={<About />} />
             </Routes>
           </main>

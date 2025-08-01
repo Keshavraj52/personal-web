@@ -275,46 +275,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Timeline Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">My Journey</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border"></div>
-              
-              <div className="space-y-8">
-                {timeline.map((item, index) => {
-                  const Icon = getTimelineIcon(item.type)
-                  return (
-                    <div key={index} className="relative flex items-start space-x-6">
-                      {/* Timeline dot */}
-                      <div className={`relative z-10 w-16 h-16 rounded-full bg-gradient-to-r ${getTimelineColor(item.type)} flex items-center justify-center flex-shrink-0`}>
-                        <Icon className="h-6 w-6 text-white" />
-                      </div>
-                      
-                      {/* Content */}
-                      <Card className="flex-1">
-                        <CardContent className="p-6">
-                          <div className="flex items-center justify-between mb-2">
-                            <Badge variant="outline">{item.year}</Badge>
-                            <Badge variant="secondary" className="capitalize">
-                              {item.type}
-                            </Badge>
-                          </div>
-                          <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                          <p className="text-sm text-blue-600 mb-2">{item.organization}</p>
-                          <p className="text-muted-foreground text-sm">{item.description}</p>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-
+      
         {/* Call to Action */}
         <div className="text-center">
           <Card className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 border-blue-200 dark:border-blue-800">

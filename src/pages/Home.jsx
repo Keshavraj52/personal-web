@@ -17,7 +17,8 @@ import {
   Play,
   Users,
   BookOpen,
-  Star
+  Star,
+  Brain
 } from 'lucide-react'
 import { color } from 'framer-motion'
 
@@ -84,6 +85,13 @@ useEffect(() => {
       description: 'Open-source MCP servers and data visualization projects',
       link: '/mcp-servers',
       color: 'from-purple-500 to-violet-500'
+    },
+       {
+      icon: Brain,
+      title: 'Quiz Generator',
+      description: 'generate quizzes based on your learning needs',
+      link: '/quiz-generator',
+      color: 'from-pink-500 to-fuchsia-500'
     }
   ]
 
