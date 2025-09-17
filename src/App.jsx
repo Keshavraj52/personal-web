@@ -12,8 +12,10 @@ import MCPServers from './pages/MCPServers'
 import QuizGenerator from './pages/quizgen'
 import About from './pages/About'
 import './App.css'
+import PythonCompiler from './pages/PythonCompiler'
 
 function App() {
+  
   return (
     <ThemeProvider>
       <Router>
@@ -28,6 +30,7 @@ function App() {
               <Route path="/sql-learning" element={<SQLLearning />} />
               <Route path="/mcp-servers" element={<MCPServers />} />
               <Route path='/quiz-generator' element={<QuizGenerator />} />
+              <Route path="/pycom" element={<PythonCompiler />} />
               <Route path="/about" element={<About />} />
             </Routes>
           </main>

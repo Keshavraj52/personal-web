@@ -15,9 +15,11 @@ const Navbar = () => {
     { path: '/achievements', label: 'Achievements', icon: Trophy },
     { path: '/youtube', label: 'YouTube', icon: Youtube },
     { path: '/sql-learning', label: 'SQL Learning', icon: Database },
+    {path: '/pycom', label: 'SQL Notes', icon: Code },
     { path: '/mcp-servers', label: 'MCP Servers', icon: Server },
     {path: '/quiz-generator', label: 'Quiz Generator', icon: Code },
-    { path: '/about', label: 'About', icon: User },
+    { path: '/about', label: 'About', icon: User }
+    
   ]
 
   const isActive = (path) => location.pathname === path
