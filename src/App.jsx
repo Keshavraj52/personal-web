@@ -13,6 +13,7 @@ import QuizGenerator from './pages/quizgen'
 import About from './pages/About'
 import './App.css'
 import PythonCompiler from './pages/PythonCompiler'
+import VoiceBillingApp from './pages/VoiceBillingApp'
 
 function App() {
   
@@ -30,7 +31,8 @@ function App() {
               <Route path="/sql-learning" element={<SQLLearning />} />
               <Route path="/mcp-servers" element={<MCPServers />} />
               <Route path='/quiz-generator' element={<QuizGenerator />} />
-              <Route path="/pycom" element={<PythonCompiler />} />
+              <Route path="/sqlnotes" element={<PythonCompiler />} />
+              <Route path="/voicebillingapp" element={<VoiceBillingApp/>}/>
               <Route path="/about" element={<About />} />
             </Routes>
           </main>

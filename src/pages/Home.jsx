@@ -18,7 +18,9 @@ import {
   Users,
   BookOpen,
   Star,
-  Brain
+  Brain,
+  Notebook,
+  VideoIcon
 } from 'lucide-react'
 import { color } from 'framer-motion'
 
@@ -262,14 +264,14 @@ useEffect(() => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
                     <Link to="/sql-learning">
-                      <BookOpen className="mr-2 h-4 w-4" />
+                      <VideoIcon className="mr-2 h-4 w-4" />
                       Start Learning SQL
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg">
-                    <a href="https://www.youtube.com/@Keshavrajpore" target="_blank" rel="noopener noreferrer">
-                      <Youtube className="mr-2 h-4 w-4" />
-                      Watch on YouTube
+                    <a href="/sqlnotes" target="_blank" rel="noopener noreferrer">
+                      <BookOpen className="mr-2 h-4 w-4" />
+                      SQL Notes
                     </a>
                   </Button>
                 </div>

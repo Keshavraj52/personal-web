@@ -12,7 +12,9 @@ import {
   Star,
   GitFork,
   Loader2,
-  AlertCircle
+  AlertCircle,
+  Rocket,
+  Play
 } from 'lucide-react'
 import { githubApi } from '../services/githubApi'
 
@@ -27,21 +29,50 @@ const Projects = () => {
   const [stats, setStats] = useState(null)
   const projectsPerPage = 9
 
+  // Featured live demos - Add your live projects here
+  const liveDemos = [
+    {
+      id: 'demo-1',
+      title: 'Voice Based Billing App',
+      description: 'Engineered a voice-activated billing interface enabling hands-free item entry by reducing 60% time for item entry, dynamic total calculation, and receipt generation. Designed for accessibility-centric retail environments, the system lays groundwork for future UPI integration , real-time transaction processing and and generate detailed billing reports for enhanced business insights.',
+      demoUrl: '',
+      githubUrl: 'https://github.com/Keshavraj52/voice-based-billing-system',
+      image: '../../public/images/voice billing.png',
+      technologies: ['StreamLit', 'Python', 'SpeechRecognition', 'TTS', 'PDF Generation']
+    },
+    {
+      id: 'demo-2',
+      title: 'Task Management App',
+      description: 'A feature-rich task management application with drag-and-drop functionality, team collaboration, and deadline tracking.',
+      demoUrl: 'https://your-demo-2.vercel.app',
+      githubUrl: 'https://github.com/Keshavraj52/task-manager',
+      image: 'https://via.placeholder.com/400x200/8b5cf6/ffffff?text=Task+Manager',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Express']
+    },
+    {
+      id: 'demo-3',
+      title: 'Weather Forecast App',
+      description: 'Real-time weather forecasting application with interactive maps, 7-day predictions, and location-based weather alerts.',
+      demoUrl: 'https://your-demo-3.vercel.app',
+      githubUrl: 'https://github.com/Keshavraj52/weather-app',
+      image: 'https://via.placeholder.com/400x200/ec4899/ffffff?text=Weather+App',
+      technologies: ['React', 'OpenWeather API', 'Mapbox', 'CSS3']
+    }
+  ]
+
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         setLoading(true)
         setError(null)
         
-        // Fetch repositories and stats
         const [repos, repoStats] = await Promise.all([
           githubApi.getAllRepositories(),
           githubApi.getRepositoryStats()
         ])
         
-        // Transform and filter public repositories
         const transformedRepos = repos
-          .filter(repo => !repo.private) // Only public repos
+          .filter(repo => !repo.private)
           .map(repo => githubApi.transformRepositoryData(repo))
         
         setProjects(transformedRepos)
@@ -51,7 +82,6 @@ const Projects = () => {
         console.error('Error fetching projects:', err)
         setError('Failed to load projects. Please try again later.')
         
-        // Fallback to mock data if API fails
         const mockProjects = [
           {
             id: 1,
@@ -103,7 +133,6 @@ const Projects = () => {
   useEffect(() => {
     let filtered = projects
 
-    // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(project =>
         project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -112,7 +141,6 @@ const Projects = () => {
       )
     }
 
-    // Filter by technology
     if (selectedTech !== 'all') {
       filtered = filtered.filter(project =>
         project.language?.toLowerCase() === selectedTech.toLowerCase() ||
@@ -124,12 +152,10 @@ const Projects = () => {
     setCurrentPage(1)
   }, [searchTerm, selectedTech, projects])
 
-  // Get unique technologies
   const technologies = ['all', ...new Set(projects.flatMap(project => 
     [project.language, ...(project.topics || [])].filter(Boolean)
   ))]
 
-  // Pagination
   const indexOfLastProject = currentPage * projectsPerPage
   const indexOfFirstProject = indexOfLastProject - projectsPerPage
   const currentProjects = filteredProjects.slice(indexOfFirstProject, indexOfLastProject)
@@ -192,6 +218,84 @@ const Projects = () => {
           )}
         </div>
 
+        {/* Live Demos Section */}
+        <div className="mb-16">
+          <div className="flex items-center justify-center mb-8">
+            <Rocket className="h-6 w-6 mr-2 text-primary" />
+            <h2 className="text-3xl font-bold">Featured Live Demos</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {liveDemos.map((demo) => (
+              <Card key={demo.id} className="overflow-hidden group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="relative overflow-hidden">
+                  <img 
+                    src={demo.image} 
+                    alt={demo.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                    <Button asChild size="sm" className="bg-white text-black hover:bg-gray-100">
+                      <a href={demo.demoUrl} target="_blank" rel="noopener noreferrer">
+                        <Play className="h-4 w-4 mr-2" />
+                        View Demo
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+                
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-xl">{demo.title}</CardTitle>
+                    <div className="flex space-x-1">
+                      <Button asChild variant="ghost" size="icon" className="h-8 w-8">
+                        <a href={demo.demoUrl} target="_blank" rel="noopener noreferrer" title="Live Demo">
+                          <ExternalLink className="h-4 w-4" />
+                        </a>
+                      </Button>
+                      <Button asChild variant="ghost" size="icon" className="h-8 w-8">
+                        <a href={demo.githubUrl} target="_blank" rel="noopener noreferrer" title="View Code">
+                          <Github className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                </CardHeader>
+                
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground text-sm">
+                    {demo.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {demo.technologies.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  
+                  <Button asChild className="w-full" variant="outline">
+                    <a href={demo.demoUrl} target="_blank" rel="noopener noreferrer">
+                      <Play className="h-4 w-4 mr-2" />
+                      Launch Demo
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-border my-12"></div>
+
+        {/* All Projects Header */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-2">All GitHub Repositories</h2>
+          <p className="text-muted-foreground">Browse through all my open-source projects</p>
+        </div>
+
         {/* Stats */}
         {stats && (
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
@@ -229,7 +333,6 @@ const Projects = () => {
         {/* Filters */}
         <div className="mb-8 space-y-4">
           <div className="flex flex-col sm:flex-row gap-4">
-            {/* Search */}
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <Input
@@ -240,7 +343,6 @@ const Projects = () => {
               />
             </div>
 
-            {/* Technology Filter */}
             <div className="flex items-center space-x-2">
               <Filter className="h-4 w-4 text-muted-foreground" />
               <select
@@ -257,7 +359,6 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* Results count */}
           <p className="text-sm text-muted-foreground">
             Showing {filteredProjects.length} of {projects.length} projects
           </p>
@@ -293,7 +394,6 @@ const Projects = () => {
                   {project.description || 'No description available'}
                 </p>
 
-                {/* Language and Stats */}
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center space-x-2">
                     {project.language && (
@@ -315,7 +415,6 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Topics */}
                 {project.topics && project.topics.length > 0 && (
                   <div className="flex flex-wrap gap-1">
                     {project.topics.slice(0, 3).map((topic) => (
@@ -331,7 +430,6 @@ const Projects = () => {
                   </div>
                 )}
 
-                {/* Updated date */}
                 <div className="flex items-center text-xs text-muted-foreground">
                   <Calendar className="h-3 w-3 mr-1" />
                   Updated {formatDate(project.updatedAt)}
@@ -385,4 +483,3 @@ const Projects = () => {
 }
 
 export default Projects
-
