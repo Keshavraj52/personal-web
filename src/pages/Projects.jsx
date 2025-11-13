@@ -30,35 +30,35 @@ const Projects = () => {
   const projectsPerPage = 9
 
   // Featured live demos - Add your live projects here
-  const liveDemos = [
-    {
-      id: 'demo-1',
-      title: 'Voice Based Billing App',
-      description: 'Engineered a voice-activated billing interface enabling hands-free item entry by reducing 60% time for item entry, dynamic total calculation, and receipt generation. Designed for accessibility-centric retail environments, the system lays groundwork for future UPI integration , real-time transaction processing and and generate detailed billing reports for enhanced business insights.',
-      demoUrl: '',
-      githubUrl: 'https://github.com/Keshavraj52/voice-based-billing-system',
-      image: '../../public/images/voice billing.png',
-      technologies: ['StreamLit', 'Python', 'SpeechRecognition', 'TTS', 'PDF Generation']
-    },
-    {
-      id: 'demo-2',
-      title: 'Task Management App',
-      description: 'A feature-rich task management application with drag-and-drop functionality, team collaboration, and deadline tracking.',
-      demoUrl: 'https://your-demo-2.vercel.app',
-      githubUrl: 'https://github.com/Keshavraj52/task-manager',
-      image: 'https://via.placeholder.com/400x200/8b5cf6/ffffff?text=Task+Manager',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express']
-    },
-    {
-      id: 'demo-3',
-      title: 'Weather Forecast App',
-      description: 'Real-time weather forecasting application with interactive maps, 7-day predictions, and location-based weather alerts.',
-      demoUrl: 'https://your-demo-3.vercel.app',
-      githubUrl: 'https://github.com/Keshavraj52/weather-app',
-      image: 'https://via.placeholder.com/400x200/ec4899/ffffff?text=Weather+App',
-      technologies: ['React', 'OpenWeather API', 'Mapbox', 'CSS3']
-    }
-  ]
+  // const liveDemos = [
+  //   {
+  //     id: 'demo-1',
+  //     title: 'Voice Based Billing App',
+  //     description: 'Engineered a voice-activated billing interface enabling hands-free item entry by reducing 60% time for item entry, dynamic total calculation, and receipt generation. Designed for accessibility-centric retail environments, the system lays groundwork for future UPI integration , real-time transaction processing and and generate detailed billing reports for enhanced business insights.',
+  //     demoUrl: '',
+  //     githubUrl: 'https://github.com/Keshavraj52/voice-based-billing-system',
+  //     image: '../../public/images/voice billing.png',
+  //     technologies: ['StreamLit', 'Python', 'SpeechRecognition', 'TTS', 'PDF Generation']
+  //   },
+  //   {
+  //     id: 'demo-2',
+  //     title: 'Task Management App',
+  //     description: 'A feature-rich task management application with drag-and-drop functionality, team collaboration, and deadline tracking.',
+  //     demoUrl: 'https://your-demo-2.vercel.app',
+  //     githubUrl: 'https://github.com/Keshavraj52/task-manager',
+  //     image: 'https://via.placeholder.com/400x200/8b5cf6/ffffff?text=Task+Manager',
+  //     technologies: ['React', 'Node.js', 'MongoDB', 'Express']
+  //   },
+  //   {
+  //     id: 'demo-3',
+  //     title: 'Weather Forecast App',
+  //     description: 'Real-time weather forecasting application with interactive maps, 7-day predictions, and location-based weather alerts.',
+  //     demoUrl: 'https://your-demo-3.vercel.app',
+  //     githubUrl: 'https://github.com/Keshavraj52/weather-app',
+  //     image: 'https://via.placeholder.com/400x200/ec4899/ffffff?text=Weather+App',
+  //     technologies: ['React', 'OpenWeather API', 'Mapbox', 'CSS3']
+  //   }
+  // ]
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -218,7 +218,7 @@ const Projects = () => {
           )}
         </div>
 
-        {/* Live Demos Section */}
+        {/* Live Demos Section
         <div className="mb-16">
           <div className="flex items-center justify-center mb-8">
             <Rocket className="h-6 w-6 mr-2 text-primary" />
@@ -285,7 +285,7 @@ const Projects = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Divider */}
         <div className="border-t border-border my-12"></div>

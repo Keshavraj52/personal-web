@@ -15,9 +15,6 @@ const Navbar = () => {
     { path: '/achievements', label: 'Achievements', icon: Trophy },
     { path: '/youtube', label: 'YouTube', icon: Youtube },
     { path: '/sql-learning', label: 'SQL Learning', icon: Database },
-    {path: '/voicebillingapp', label: 'Voice Billing App', icon: Code },
-    { path: '/mcp-servers', label: 'MCP Servers', icon: Server },
-    {path: '/quiz-generator', label: 'Quiz Generator', icon: Code },
     { path: '/about', label: 'About', icon: User }
     
   ]
@@ -28,15 +25,19 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">KP</span>
-            </div>
-            <span className="font-bold text-xl">Keshavraj Pore</span>
-          </Link>
+          
+                <Link to="/" className="flex items-center space-x-2">
+                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary hover:scale-110 transition-transform duration-300">
+                  <img 
+                  src="/images/profile photo.jpg" 
+                  alt="Profile Photo" 
+                  className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="font-bold text-xl">Keshavraj Pore</span>
+                </Link>
 
-          {/* Desktop Navigation */}
+                {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => {
               const Icon = item.icon

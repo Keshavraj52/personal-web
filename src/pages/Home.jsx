@@ -20,9 +20,8 @@ import {
   Star,
   Brain,
   Notebook,
-  VideoIcon
+  Video
 } from 'lucide-react'
-import { color } from 'framer-motion'
 
 const Home = () => {
 const [stats, setStats] = useState({
@@ -54,62 +53,56 @@ useEffect(() => {
 
   const features = [
     {
-      icon: Code,
-      title: 'Projects',
-      description: 'Explore my GitHub repositories with diverse tech stacks',
-      link: '/projects',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Trophy,
-      title: 'Achievements',
-      description: 'Certifications, hackathons, and professional milestones',
-      link: '/achievements',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Youtube,
-      title: 'YouTube Channel',
-      description: 'Educational content on data analytics and programming',
-      link: '/youtube',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Database,
-      title: 'SQL Learning',
-      description: 'Comprehensive SQL tutorial series with progress tracking',
-      link: '/sql-learning',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Server,
-      title: 'MCP Servers',
-      description: 'Open-source MCP servers and data visualization projects',
-      link: '/mcp-servers',
-      color: 'from-purple-500 to-violet-500'
-    },
-       {
-      icon: Brain,
-      title: 'Quiz Generator',
-      description: 'generate quizzes based on your learning needs',
-      link: '/quiz-generator',
-      color: 'from-pink-500 to-fuchsia-500'
-    }
+  icon: Code,
+  title: 'Projects',
+  description: 'Take a look at my GitHub projects where I experiment with different technologies and build real-world solutions.',
+  link: '/projects',
+  color: 'from-emerald-500 to-teal-500'
+},
+{
+  icon: Trophy,
+  title: 'Achievements',
+  description: 'From hackathons to certifications. here is a glimpse of the milestones that shaped my learning journey.',
+  link: '/achievements',
+  color: 'from-amber-500 to-orange-500'
+},
+{
+  icon: Youtube,
+  title: 'YouTube Channel',
+  description: 'I create simple, practical tutorials on data analytics and programming. helping others learn what I love doing.',
+  link: '/youtube',
+  color: 'from-rose-500 to-pink-500'
+},
+{
+  icon: Database,
+  title: 'SQL Learning',
+  description: 'A complete SQL learning series I built to help students and beginners master databases step by step.',
+  link: '/sql-learning',
+  color: 'from-cyan-500 to-blue-500'
+},
+{
+  icon: Server,
+  title: 'MCP Servers',
+  description: 'Explore my open-source MCP server projects and interactive dashboards for data visualization.',
+  link: '/mcp-servers',
+  color: 'from-indigo-500 to-purple-500'
+}
+
   ]
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         <video
     autoPlay
     loop
     muted
     playsInline
-    className="absolute inset-0 w-full h-full object-cover opacity-85 z-0"
+    className="absolute inset-0 w-full h-full object-cover opacity-20 z-0"
   >
-    <source src="/3Dcolor.mp4" type="video/mp4" />
+    <source src="/12682205_3840_2160_30fps.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
@@ -119,53 +112,53 @@ useEffect(() => {
             
             <div className="space-y-8">
               <div className="space-y-4">
-                {/* <Badge variant="secondary" className="w-fit">
-                  <span className="animate-pulse mr-2">🚀</span>
-                  Data Enthusiast & Problem Solver
-                </Badge> */}
-                <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent" >
-                  <span style={{ color: '#2CEAA3' }}>Hi 👋, I'm{' '}</span>
-                  <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                <h1 className="text-4xl lg:text-6xl font-bold">
+                  <span className="text-emerald-400">Hi, I'm{' '}</span>
+                  <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                     Keshavraj Pore
                   </span>
                 </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  Passionate about Data Analytics, Databases, and Optimization. 
-                  Teaching complex topics on YouTube, exploring Hacker Rank, LeetCode challenges 
-                  and turning data into insights, one query at a time! ✨
-                </p>
+              <div className="max-w-2xl mx-auto text-justify sm:text-left px-4">
+  <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-[Inter] tracking-wide">
+    I'm an AI and Data Science student from Pune who loves solving real-world problems with data and automation. 
+    I'm passionate about Data Analytics and Data Science roles where I can turn insights into meaningful impact. 
+    I share my learning on YouTube, solve challenges on LeetCode, and contribute to open-source projects on GitHub. 
+    always exploring new ways to grow and build smarter solutions.
+  </p>
+</div>
+
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="text-center p-4 rounded-lg bg-muted/50">
-                  <div className="text-2xl font-bold text-red-500">{stats.youtubeSubscribers}</div>
-                  <div className="text-sm text-muted-foreground">YouTube Subscribers</div>
+                <div className="text-center p-4 rounded-lg bg-slate-800/80 backdrop-blur-sm border border-slate-700">
+                  <div className="text-2xl font-bold text-rose-400">{stats.youtubeSubscribers}</div>
+                  <div className="text-sm text-slate-400">YouTube Subscribers</div>
                 </div>
-                <div className="text-center p-4 rounded-lg bg-muted/50">
-                  <div className="text-2xl font-bold text-red-500">{stats.youtubeVideos}</div>
-                  <div className="text-sm text-muted-foreground">Videos</div>
+                <div className="text-center p-4 rounded-lg bg-slate-800/80 backdrop-blur-sm border border-slate-700">
+                  <div className="text-2xl font-bold text-rose-400">{stats.youtubeVideos}</div>
+                  <div className="text-sm text-slate-400">Videos</div>
                 </div>
-                <div className="text-center p-4 rounded-lg bg-muted/50">
-                  <div className="text-2xl font-bold text-blue-500">{stats.githubRepos}</div>
-                  <div className="text-sm text-muted-foreground">GitHub Repos</div>
+                <div className="text-center p-4 rounded-lg bg-slate-800/80 backdrop-blur-sm border border-slate-700">
+                  <div className="text-2xl font-bold text-emerald-400">{stats.githubRepos}</div>
+                  <div className="text-sm text-slate-400">GitHub Repos</div>
                 </div>
-                <div className="text-center p-4 rounded-lg bg-muted/50">
-                  <div className="text-2xl font-bold text-yellow-500">Free</div>
-                  <div className="text-sm text-muted-foreground">SQL Course</div>
+                <div className="text-center p-4 rounded-lg bg-slate-800/80 backdrop-blur-sm border border-slate-700">
+                  <div className="text-2xl font-bold text-amber-400">Free</div>
+                  <div className="text-sm text-slate-400">SQL Course</div>
                 </div>
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="group">
+                <Button asChild size="lg" className="group bg-emerald-600 hover:bg-emerald-700 text-white">
                   <Link to="/projects">
                     <Code className="mr-2 h-4 w-4" />
                     View Projects
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="group">
+                <Button asChild variant="outline" size="lg" className="group border-slate-600 text-slate-200 hover:bg-slate-800">
                   <a href="https://www.youtube.com/@Keshavrajpore" target="_blank" rel="noopener noreferrer">
                     <Youtube className="mr-2 h-4 w-4" />
                     Watch Videos
@@ -176,39 +169,42 @@ useEffect(() => {
             </div>
 
             {/* Profile Image/Animation */}
-            <div className="relative">
-              <div className="relative w-full max-w-md mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                <div className="relative bg-gradient-to-br from-muted to-background rounded-2xl p-8 border border-border">
-                  <div className="text-center space-y-6">
-                    <div className="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold">
-                      KP
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold">Currently Working On</h3>
-                      <ul className="text-sm text-muted-foreground mt-2 space-y-1">
-                        <li>📊 Data visualizations and dashboards</li>
-                        <li>🧩 LeetCode SQL & Data Structures</li>
-                        <li>🎥 YouTube educational content</li>
-                        <li>🤖 Machine Learning projects</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative flex justify-center items-center py-12 bg-transparent">
+  <div className="relative w-full max-w-lg mx-auto">
+    {/* Soft Glow Background */}
+    <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+
+    {/* Profile Image Wrapper */}
+    <div className="relative flex justify-center items-center">
+      <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 mx-auto">
+        {/* Glowing Gradient Border */}
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 p-[6px]">
+          <div className="w-full h-full rounded-full bg-transparent"></div>
+        </div>
+
+        {/* Profile Image */}
+        <img
+          src="/images/profile photo.jpg"
+          alt="Profile"
+          className="relative w-full h-full object-cover rounded-full border-4 border-transparent shadow-2xl transition-transform duration-300 hover:scale-105"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-muted/20">
+      <section className="py-20 bg-slate-50 dark:bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-slate-900 dark:text-slate-100">
               Explore My Work
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
               Discover my projects, achievements, educational content, and open-source contributions
             </p>
           </div>
@@ -217,16 +213,16 @@ useEffect(() => {
             {features.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700">
                   <CardContent className="p-6">
                     <div className="space-y-4">
                       <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
                         <Icon className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                        <p className="text-muted-foreground mb-4">{feature.description}</p>
-                        <Button asChild variant="ghost" className="group/btn p-0 h-auto">
+                        <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100">{feature.title}</h3>
+                        <p className="text-slate-600 dark:text-slate-400 mb-4">{feature.description}</p>
+                        <Button asChild variant="ghost" className="group/btn p-0 h-auto text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300">
                           <Link to={feature.link}>
                             Learn more
                             <ArrowRight className="ml-1 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -243,32 +239,32 @@ useEffect(() => {
       </section>
 
       {/* Special Promotion Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-slate-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 border-blue-200 dark:border-blue-800">
+          <Card className="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border-emerald-200 dark:border-emerald-800">
             <CardContent className="p-8 text-center">
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <Badge variant="secondary" className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+                  <Badge variant="secondary" className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">
                     🎓 Free Course
                   </Badge>
-                  <h3 className="text-2xl lg:text-3xl font-bold">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-slate-900 dark:text-slate-100">
                     Complete SQL Course in Marathi
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-slate-600 dark:text-slate-400">
                     Learn SQL from basics to advanced concepts with real-world examples. 
                     Perfect for beginners and those looking to strengthen their database skills.
                   </p>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white">
                     <Link to="/sql-learning">
-                      <VideoIcon className="mr-2 h-4 w-4" />
+                      <Video className="mr-2 h-4 w-4" />
                       Start Learning SQL
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg">
+                  <Button asChild variant="outline" size="lg" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:border-emerald-400 dark:text-emerald-400 dark:hover:bg-emerald-950">
                     <a href="/sqlnotes" target="_blank" rel="noopener noreferrer">
                       <BookOpen className="mr-2 h-4 w-4" />
                       SQL Notes
@@ -285,4 +281,3 @@ useEffect(() => {
 }
 
 export default Home
-

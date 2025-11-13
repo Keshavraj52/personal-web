@@ -33,28 +33,28 @@ const AIAssistant = () => {
   const [isTyping, setIsTyping] = useState(false)
 
   const quickActions = [
-    { label: "Skills", query: "skills" },
-    { label: "Projects", query: "projects" },
-    { label: "Experience", query: "experience" },
-    { label: "Contact", query: "contact" },
-    { label: "Intro", query: "intro" }
+    { label: "Skills", query: "skills", icon: "💻" },
+    { label: "Projects", query: "projects", icon: "🚀" },
+    { label: "Experience", query: "experience", icon: "💼" },
+    { label: "Contact", query: "contact", icon: "📧" },
+    { label: "Intro", query: "intro", icon: "👋" }
   ]
 
   const responses = {
     skills: {
       text: `🐍 Python (a.k.a. My Spirit Animal)
-Whether it’s building AI apps, web automation using Selenium, wrangling data like a cowboy with Pandas, or painting pretty graphs with Matplotlib — Python and I go together like chai and coding nights.
-Bonus: DSA and OOP? I don’t just learn them — I debug them in my dreams.
+Whether it's building AI apps, web automation using Selenium, wrangling data like a cowboy with Pandas, or painting pretty graphs with Matplotlib — Python and I go together like chai and coding nights.
+Bonus: DSA and OOP? I don't just learn them — I debug them in my dreams.
 
 🌐 Web Technologies – The Internet Runs on My Stack
 HTML & CSS: Built with more care than a Diwali rangoli.
 Angular & TypeScript: For when I want my front end spicy and structured.
-Node.js & Express.js: Because backend APIs shouldn’t behave like Indian government websites.
+Node.js & Express.js: Because backend APIs shouldn't behave like Indian government websites.
 
 TL;DR: I speak MEAN fluently — MongoDB to Angular and everything in between.
 
 🛢️ MySQL – The SQLon of my Database Empire
-I don’t just query — I optimize, normalize, and sometimes dramatize (with cool joins and subqueries).
+I don't just query — I optimize, normalize, and sometimes dramatize (with cool joins and subqueries).
 Fun Fact: I created an entire free SQL course on YouTube, because why not teach while you learn?
 
 🤖 AI Tools – Automation, Meet Ambition
@@ -62,7 +62,7 @@ ChatGPT & Claude AI: My co-pilots in coding, writing emails, or just surviving s
 
 AI Studio: Because building AI stuff feels cooler when the UI looks futuristic.
 
-GitHub Copilot: It writes, I supervise. We’re a good team.
+GitHub Copilot: It writes, I supervise. We're a good team.
 
 🔧 Misc. Tools – The Secret Sauce
 Streamlit – Making boring dashboards feel like interactive Netflix interfaces.
@@ -81,19 +81,19 @@ Special Attack: SQL + Data Analytics — catch his Marathi tech sorcery on YouTu
     projects: {
       text: `🏛️ Enterprise-Grade University Workflow Automation (Final Year Project)
 Tech Stack: LLMs, Python, Claude AI, MCP (Model Context Protocol)
-What It Does: Imagine a university where forms don’t get lost, approvals don’t take a semester, and AI politely bosses everyone around — that’s this project. It uses LLMs like Claude to automate the academic workflow while your professors wonder if you're the next Elon of EduTech.
-Fun Bit: MCP here doesn’t mean “My College Problem,” but solves quite a few of them!
+What It Does: Imagine a university where forms don't get lost, approvals don't take a semester, and AI politely bosses everyone around — that's this project. It uses LLMs like Claude to automate the academic workflow while your professors wonder if you're the next Elon of EduTech.
+Fun Bit: MCP here doesn't mean "My College Problem," but solves quite a few of them!
 
 🌐 Portfolio Website (But Make It Smart)
-What’s Inside: YouTube bot, GitHub repos, AI Quiz Bot, SQL gamified zone, and a museum of your future automation tools (yes, future — because why limit yourself?).
+What's Inside: YouTube bot, GitHub repos, AI Quiz Bot, SQL gamified zone, and a museum of your future automation tools (yes, future — because why limit yourself?).
 Tech Stack: HTML, CSS, creativity, and a sprinkle of ambition.
 Link: keshavrajpore.netlify.app
-Tagline: “Not just a portfolio — it’s a coding carnival!”
+Tagline: "Not just a portfolio — it's a coding carnival!"
 
 🎙️ Voice-Based Billing System (Because Typing is Overrated)
 Tech Stack: Python, Streamlit
 What It Does: Speak your items out loud — this app hears you, tallies up your groceries like your local kirana uncle, and spits out a bill PDF — no arguments, no spelling errors.
-Bonus: Integrated UPI payment! Just say “bhaiya, total kitna?” and boom — it’s paid.
+Bonus: Integrated UPI payment! Just say "bhaiya, total kitna?" and boom — it's paid.
 
 🧠 Virtusa Technology Orientation for Faculty (VTOF)
 Tech Stack: Angular, HTML, CSS, JSON
@@ -107,15 +107,15 @@ Cool Twist: You even pickled the model — not in vinegar, but using Python's pi
 
 📦 MEAN Stack CRUD Application (CRUD = Code Rules Until Deployment)
 Tech Stack: MongoDB, Express.js, Angular, Node.js
-Overview: A fully functional CRUD app — because real developers don’t just “read-only.”
+Overview: A fully functional CRUD app — because real developers don't just "read-only."
 What You Proved: That you're MEAN — in a full-stack, not grumpy, way.
 
 🏆 And the Trophy Shelf Says...
 🥇 Winner @ Vertexo 4.0
 
-🥈 Runner-Up @ PCCOE’s Spectrum 2023
+🥈 Runner-Up @ PCCOE's Spectrum 2023
 
-🥉 3rd Prize @ DYPIEMR’s Model Demonstration
+🥉 3rd Prize @ DYPIEMR's Model Demonstration
 `,
       meme: "https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/8689467/gatsby.gif?quality=90&strip=all&crop=18.78125%2C0%2C62.4375%2C100&w=1080",
       memeAlt: "Success Kid - Finished another project!"
@@ -166,13 +166,13 @@ DMs open for data chats, collabs, or discussing why pie charts are overrated.`,
 
     intro: {
       text: `👋 Introduction
-Hello! I'm Keshavraj Pore, an enthusiastic and growth-driven final-year B.E. student specializing in Artificial Intelligence and Data Science. I’m passionate about building smart, scalable, and user-friendly solutions using technologies like Python, Angular, and the MEAN stack.
+Hello! I'm Keshavraj Pore, an enthusiastic and growth-driven final-year B.E. student specializing in Artificial Intelligence and Data Science. I'm passionate about building smart, scalable, and user-friendly solutions using technologies like Python, Angular, and the MEAN stack.
 
 From leading teams in the Smart India Hackathon to crafting voice-controlled billing apps and AI-powered automation systems, I enjoy turning complex problems into elegant code — and occasionally into YouTube tutorials too!
 
 With hands-on experience through internships and personal projects, I'm always curious about learning new tools (especially AI ones!) and contributing meaningfully to tech communities. Whether it's solving LeetCode challenges, deploying apps, or mentoring others through my free SQL course, I strive to balance learning, leading, and creating.
 
-I’m currently seeking opportunities where I can apply my skills, learn from real-world challenges, and grow as a well-rounded software professional.
+I'm currently seeking opportunities where I can apply my skills, learn from real-world challenges, and grow as a well-rounded software professional.
 (Also available in serious mode on request 😄)`,
       meme: "https://media.tenor.com/M0895TLTfZkAAAAM/this-is-my-introduction-tank.gif",
       memeAlt: "this is my introduction"
@@ -283,47 +283,54 @@ I’m currently seeking opportunities where I can apply my skills, learn from re
   // Floating action button when chat is closed
   if (!isOpen) {
     return (
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
         <Button
           onClick={() => setIsOpen(true)}
           size="lg"
-          className="relative rounded-full w-16 h-16 bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500 hover:from-purple-600 hover:via-indigo-600 hover:to-blue-600 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 animate-pulse"
+          className="relative rounded-full w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-600 hover:via-teal-600 hover:to-cyan-600 shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 transform hover:scale-110 group"
         >
-          <Bot className="h-7 w-7 text-white" />
-          <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-400 rounded-full flex items-center justify-center">
+          <Bot className="h-6 w-6 sm:h-7 sm:w-7 text-white group-hover:rotate-12 transition-transform duration-300" />
+          <div className="absolute -top-1 -right-1 w-5 h-5 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center animate-pulse shadow-lg">
             <Sparkles className="h-3 w-3 text-white" />
           </div>
+          <div className="absolute inset-0 rounded-full bg-emerald-400 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
         </Button>
       </div>
     )
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-2 right-2 sm:bottom-4 sm:right-4 z-50 w-[calc(100vw-1rem)] sm:w-auto">
       <Card className={`transition-all duration-500 ease-in-out ${
-        isMinimized ? 'h-16 w-80' : 'h-[600px] w-96'
-      } max-w-[calc(100vw-2rem)] shadow-2xl border-0 rounded-2xl bg-white/95 backdrop-blur-xl overflow-hidden`}>
+        isMinimized ? 'h-16 w-full sm:w-80' : 'h-[calc(100vh-1rem)] sm:h-[600px] w-full sm:w-96'
+      } shadow-2xl border-2 border-emerald-200/50 dark:border-emerald-800/50 rounded-3xl bg-white/98 dark:bg-slate-900/98 backdrop-blur-2xl overflow-hidden`}>
         
         {/* Header */}
-        <CardHeader className="p-0 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white">
-          <div className="flex items-center justify-between p-4">
-            <div className="flex items-center gap-3">
-              <div className="relative">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                  <Bot className="h-5 w-5" />
+        <CardHeader className="p-0 bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 text-white relative overflow-hidden">
+          {/* Animated background pattern */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16 animate-pulse"></div>
+            <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12 animate-pulse" style={{ animationDelay: '1s' }}></div>
+          </div>
+          
+          <div className="relative flex items-center justify-between p-3 sm:p-4">
+            <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
+              <div className="relative flex-shrink-0">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/30 rounded-2xl flex items-center justify-center backdrop-blur-sm shadow-lg border-2 border-white/50 transform hover:rotate-12 transition-transform duration-300">
+                  <Bot className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full border-2 border-white animate-pulse shadow-lg"></div>
               </div>
-              <div className="flex-1">
-                <CardTitle className="text-lg font-bold">AI Assistant</CardTitle>
-                <p className="text-sm opacity-90">Ask me about Keshavraj</p>
+              <div className="flex-1 min-w-0">
+                <CardTitle className="text-base sm:text-lg font-bold truncate">AI Assistant</CardTitle>
+                <p className="text-xs sm:text-sm opacity-90 truncate">Ask me about Keshavraj</p>
               </div>
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 flex-shrink-0">
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-8 w-8 text-white hover:bg-white/20 transition-colors"
+                className="h-8 w-8 text-white hover:bg-white/30 transition-all rounded-xl hover:scale-110"
                 onClick={() => setIsMinimized(!isMinimized)}
               >
                 {isMinimized ? <Maximize2 className="h-4 w-4" /> : <Minimize2 className="h-4 w-4" />}
@@ -331,7 +338,7 @@ I’m currently seeking opportunities where I can apply my skills, learn from re
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-8 w-8 text-white hover:bg-white/20 transition-colors"
+                className="h-8 w-8 text-white hover:bg-white/30 transition-all rounded-xl hover:scale-110"
                 onClick={() => setIsOpen(false)}
               >
                 <X className="h-4 w-4" />
@@ -345,42 +352,42 @@ I’m currently seeking opportunities where I can apply my skills, learn from re
           <CardContent className="p-0 flex flex-col h-[calc(100%-80px)]">
             
             {/* Messages Container */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gradient-to-b from-gray-50 to-white">
+            <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900">
               {messages.map((message) => (
                 <div
                   key={message.id}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'} animate-in slide-in-from-bottom-2 duration-300`}
                 >
-                  <div className={`flex items-start gap-2 max-w-[85%] ${
+                  <div className={`flex items-start gap-2 max-w-[90%] sm:max-w-[85%] ${
                     message.type === 'user' ? 'flex-row-reverse' : ''
                   }`}>
                     {/* Avatar */}
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+                    <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg ${
                       message.type === 'user' 
-                        ? 'bg-gradient-to-r from-blue-500 to-indigo-500' 
-                        : 'bg-gradient-to-r from-purple-500 to-indigo-500'
-                    } shadow-md`}>
+                        ? 'bg-gradient-to-br from-cyan-500 to-blue-500' 
+                        : 'bg-gradient-to-br from-emerald-500 to-teal-500'
+                    }`}>
                       {message.type === 'user' ? (
-                        <User className="h-4 w-4 text-white" />
+                        <User className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
                       ) : (
-                        <Bot className="h-4 w-4 text-white" />
+                        <Bot className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
                       )}
                     </div>
                     
                     {/* Message Bubble */}
-                    <div className={`rounded-2xl p-3 shadow-sm ${
+                    <div className={`rounded-2xl p-2.5 sm:p-3 shadow-md ${
                       message.type === 'user' 
-                        ? 'bg-gradient-to-br from-blue-500 to-indigo-500 text-white rounded-br-md' 
-                        : 'bg-white border border-gray-200 rounded-bl-md'
+                        ? 'bg-gradient-to-br from-cyan-500 to-blue-500 text-white rounded-br-md' 
+                        : 'bg-white dark:bg-slate-800 border-2 border-emerald-100 dark:border-emerald-900 rounded-bl-md'
                     }`}>
                       
                       {/* Meme Image (only for bot messages) */}
                       {message.type === 'bot' && message.meme && (
-                        <div className="mb-3 rounded-lg overflow-hidden bg-gray-100">
+                        <div className="mb-2 sm:mb-3 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-700 shadow-inner">
                           <img 
                             src={message.meme} 
                             alt={message.memeAlt || "Meme"}
-                            className="w-full h-auto max-h-48 object-contain"
+                            className="w-full h-auto max-h-40 sm:max-h-48 object-contain"
                             onError={(e) => {
                               e.target.style.display = 'none'
                             }}
@@ -388,11 +395,11 @@ I’m currently seeking opportunities where I can apply my skills, learn from re
                         </div>
                       )}
                       
-                      <p className="text-sm leading-relaxed whitespace-pre-line break-words">
+                      <p className="text-xs sm:text-sm leading-relaxed whitespace-pre-line break-words">
                         {message.content}
                       </p>
-                      <p className={`text-xs mt-2 ${
-                        message.type === 'user' ? 'text-blue-100' : 'text-gray-500'
+                      <p className={`text-[10px] sm:text-xs mt-1.5 sm:mt-2 ${
+                        message.type === 'user' ? 'text-cyan-100' : 'text-slate-500 dark:text-slate-400'
                       }`}>
                         {formatTime(message.timestamp)}
                       </p>
@@ -405,14 +412,14 @@ I’m currently seeking opportunities where I can apply my skills, learn from re
               {isTyping && (
                 <div className="flex justify-start animate-in slide-in-from-bottom-2 duration-300">
                   <div className="flex items-start gap-2">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 flex items-center justify-center shadow-md">
-                      <Bot className="h-4 w-4 text-white" />
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg">
+                      <Bot className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
                     </div>
-                    <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md p-3 shadow-sm">
+                    <div className="bg-white dark:bg-slate-800 border-2 border-emerald-100 dark:border-emerald-900 rounded-2xl rounded-bl-md p-3 shadow-md">
                       <div className="flex gap-1">
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                        <div className="w-2 h-2 bg-emerald-500 rounded-full animate-bounce"></div>
+                        <div className="w-2 h-2 bg-teal-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                        <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                       </div>
                     </div>
                   </div>
@@ -421,16 +428,17 @@ I’m currently seeking opportunities where I can apply my skills, learn from re
             </div>
 
             {/* Input Area */}
-            <div className="p-4 bg-white border-t border-gray-100">
+            <div className="p-3 sm:p-4 bg-white dark:bg-slate-900 border-t-2 border-emerald-100 dark:border-emerald-900">
               {/* Quick Actions */}
-              <div className="flex flex-wrap gap-2 mb-3">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-3">
                 {quickActions.map((action, index) => (
                   <Badge
                     key={index}
                     variant="outline"
-                    className="cursor-pointer bg-gradient-to-r from-purple-50 to-indigo-50 hover:from-purple-100 hover:to-indigo-100 text-purple-700 border-purple-200 hover:border-purple-300 transition-all duration-200 text-xs px-2 py-1"
+                    className="cursor-pointer bg-gradient-to-r from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 dark:from-emerald-950 dark:to-teal-950 dark:hover:from-emerald-900 dark:hover:to-teal-900 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800 hover:border-emerald-400 dark:hover:border-emerald-600 transition-all duration-200 text-[10px] sm:text-xs px-2 py-1 hover:scale-105 hover:shadow-md"
                     onClick={() => handleQuickAction(action.query)}
                   >
+                    <span className="mr-1">{action.icon}</span>
                     {action.label}
                   </Badge>
                 ))}
@@ -443,14 +451,14 @@ I’m currently seeking opportunities where I can apply my skills, learn from re
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder="Ask me anything..."
                   onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                  className="flex-1 border-gray-200 rounded-xl shadow-sm focus:ring-2 focus:ring-purple-200 focus:border-purple-300 transition-all"
+                  className="flex-1 border-2 border-emerald-200 dark:border-emerald-800 rounded-xl shadow-sm focus:ring-2 focus:ring-emerald-300 dark:focus:ring-emerald-700 focus:border-emerald-400 dark:focus:border-emerald-600 transition-all text-sm bg-slate-50 dark:bg-slate-800"
                   disabled={isTyping}
                 />
                 <Button
                   onClick={handleSendMessage}
                   disabled={!inputValue.trim() || isTyping}
                   size="icon"
-                  className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white shadow-md rounded-xl transition-all duration-200"
+                  className="bg-gradient-to-br from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white shadow-lg hover:shadow-emerald-500/50 rounded-xl transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed h-9 w-9 sm:h-10 sm:w-10"
                 >
                   <Send className="h-4 w-4" />
                 </Button>
@@ -458,7 +466,7 @@ I’m currently seeking opportunities where I can apply my skills, learn from re
                   onClick={clearChat}
                   variant="ghost"
                   size="icon"
-                  className="text-gray-500 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all duration-200"
+                  className="text-slate-500 hover:text-emerald-600 dark:text-slate-400 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950 rounded-xl transition-all duration-200 hover:scale-105 h-9 w-9 sm:h-10 sm:w-10"
                 >
                   <RefreshCw className="h-4 w-4" />
                 </Button>

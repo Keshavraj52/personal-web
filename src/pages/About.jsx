@@ -31,14 +31,39 @@ const About = () => {
     { category: 'Tools & Platforms', items: ['Git', 'AWS',  'Jupyter', 'VS Code'] }
   ]
 
-  const interests = [
-    { icon: Database, label: 'Data Analytics', description: 'Turning raw data into actionable insights' },
-    { icon: Code, label: 'Software Development', description: 'Building scalable and efficient applications' },
-    { icon: Brain, label: 'Machine Learning', description: 'Exploring AI and predictive modeling' },
-    { icon: Youtube, label: 'Content Creation', description: 'Teaching and sharing knowledge through videos' },
-    { icon: Coffee, label: 'Problem Solving', description: 'Tackling complex challenges with creative solutions' },
-    { icon: Heart, label: 'Open Source', description: 'Contributing to the developer community' }
-  ]
+const interests = [
+  { 
+    icon: Database, 
+    label: 'Data Analytics', 
+    description: 'I love uncovering patterns and insights hidden in data to make smarter decisions.' 
+  },
+  { 
+    icon: Code, 
+    label: 'Software Development', 
+    description: 'I enjoy building clean, scalable, and meaningful applications that solve real problems.' 
+  },
+  { 
+    icon: Brain, 
+    label: 'Machine Learning', 
+    description: 'I’m fascinated by how machines can learn from data and help predict the future.' 
+  },
+  { 
+    icon: Youtube, 
+    label: 'Content Creation', 
+    description: 'I create educational videos in Marathi to make technology and data easier to understand.' 
+  },
+  { 
+    icon: Coffee, 
+    label: 'Problem Solving', 
+    description: 'I find joy in breaking down tough challenges and finding creative ways to solve them.' 
+  },
+  { 
+    icon: Heart, 
+    label: 'Open Source', 
+    description: 'I believe in collaboration and love contributing to open-source projects that make a difference.' 
+  }
+];
+
 
   const timeline = [
     {
@@ -122,7 +147,15 @@ const About = () => {
             <Card className="sticky top-24">
               <CardContent className="p-6 text-center">
                 <div className="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold mb-6">
-                  KP
+                  <img src="/images/profile photo.jpg" alt="Profile Photo" srcset="" style={{
+  width: '180px',
+  height: '140px',
+  objectFit: 'cover',
+  borderRadius: '50%',
+  border: '4px solid #2bc0daff',
+  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+  transition: 'transform 0.3s ease'
+}} />
                 </div>
                 <h2 className="text-2xl font-bold mb-2">Keshavraj Pore</h2>
                 <p className="text-muted-foreground mb-4">Data Enthusiast & Problem Solver</p>
@@ -134,7 +167,7 @@ const About = () => {
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Mail className="h-4 w-4 text-muted-foreground" />
-                    <span>keshavraj_pore@example.com</span>
+                    <span>poreg79@gmail.com</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Phone className="h-4 w-4 text-muted-foreground" />
@@ -159,13 +192,6 @@ const About = () => {
                     </a>
                   </Button>
                 </div>
-
-                <Button asChild className="w-full mt-6">
-                  <a href="mailto:poreg79@example.com">
-                    <MessageCircle className="mr-2 h-4 w-4" />
-                    Get in Touch
-                  </a>
-                </Button>
               </CardContent>
             </Card>
           </div>
@@ -178,25 +204,30 @@ const About = () => {
                 <CardTitle>My Story</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  Hi there! I'm Keshavraj Pore, a passionate data enthusiast and problem solver from Pune, India. 
-                  My journey in technology began during my artificial intelligence and data Science studies at Savitribai Phule Pune University, 
-                  where I discovered my love for data analytics and database optimization.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  What started as curiosity about how data can tell stories has evolved into a career dedicated to 
-                  turning raw information into actionable insights. I believe that data is the new oil, and I'm here 
-                  to help refine it into valuable knowledge that drives decision-making.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Beyond my professional work, I'm passionate about education and knowledge sharing. Through my YouTube channel, 
-                  I create educational content in Marathi, making complex technical concepts accessible to a broader audience. 
-                  I believe that language should never be a barrier to learning technology.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  When I'm not coding or creating content, you'll find me exploring new technologies, contributing to open-source projects, 
-                  or solving challenging problems on Hacker Rank and LeetCode. I'm always eager to learn, grow, and share my knowledge with the community.
-                </p>
+               <div className="max-w-3xl mx-auto text-justify sm:text-left px-4">
+  <p className="text-lg sm:text-xl text-gray-700 leading-relaxed font-[Inter] tracking-wide mb-4">
+    Hi, I'm <span className="font-semibold text-gray-800">Keshavraj Pore</span> a data and AI enthusiast from Pune, India. 
+    I enjoy solving real-world problems using data, automation, and intelligent systems. 
+    My interest in this field grew during my studies in Artificial Intelligence and Data Science at 
+    Savitribai Phule Pune University.
+  </p>
+
+  <p className="text-lg sm:text-xl text-gray-700 leading-relaxed font-[Inter] tracking-wide mb-4">
+    I love transforming raw data into meaningful insights that help make better decisions. 
+    My goal is to grow as a data analyst and build smart, efficient solutions that create real impact.
+  </p>
+
+  <p className="text-lg sm:text-xl text-gray-700 leading-relaxed font-[Inter] tracking-wide mb-4">
+    I also enjoy teaching and sharing what I learn. On my YouTube channel, I explain data analytics and 
+    programming concepts in Marathi — making technology more accessible to everyone.
+  </p>
+
+  <p className="text-lg sm:text-xl text-gray-700 leading-relaxed font-[Inter] tracking-wide">
+    When I’m not coding or creating content, you’ll find me exploring new tools, contributing to open-source projects, 
+    or solving challenges on LeetCode and HackerRank. I’m always curious and eager to keep learning.
+  </p>
+</div>
+
               </CardContent>
             </Card>
 
@@ -206,55 +237,95 @@ const About = () => {
                 <CardTitle>What I'm Working On</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-green-600">🔭 Currently Working On</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Creating insightful data visualizations and dashboards</li>
-                      <li>• Solving LeetCode problems related to SQL & Data Structures</li>
-                      <li>• Enhancing my YouTube content on data-related topics</li>
-                      <li>• Building MCP servers for various use cases</li>
-                    </ul>
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-blue-600">🌱 Currently Learning</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Machine Learning for Data Analysis</li>
-                      <li>• Time Series Forecasting & Predictive Analytics</li>
-                      <li>• Data Storytelling & Business Intelligence tools</li>
-                      <li>• Advanced cloud technologies and DevOps</li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mt-8 font-[Inter]">
+ {/* Currently Working On */}
+<div className="space-y-3 relative">
+  <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-green-500 to-emerald-600 rounded-full"></div>
+  <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl p-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+    <h4 className="text-xl font-semibold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent flex items-center gap-2">
+      <span className="animate-bounce">🔭</span> Currently Working On
+    </h4>
+    <ul className="text-base text-gray-700 dark:text-gray-300 leading-relaxed space-y-3 mt-4">
+      {[
+        { icon: "📊", text: "Designing clear and interactive data visualizations and dashboards" },
+        { icon: "🧠", text: "Practicing SQL and Data Structure problems on LeetCode" },
+        { icon: "🎥", text: "Creating new YouTube videos focused on data and analytics" },
+        { icon: "🛠️", text: "Developing open-source MCP servers for real-world applications" }
+      ].map((item, index) => (
+        <li key={index} className="flex items-start gap-3 group">
+          <span className="group-hover:scale-125 transition-transform">{item.icon}</span>
+          <span className="group-hover:text-green-600 dark:group-hover:text-emerald-400 transition-colors">
+            {item.text}
+          </span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
 
-        {/* Skills Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Skills & Technologies</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skills.map((skillGroup, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <CardTitle className="text-lg">{skillGroup.category}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {skillGroup.items.map((skill, skillIndex) => (
-                      <Badge key={skillIndex} variant="secondary">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
+  {/* Currently Learning */}
+  <div className="space-y-3 relative">
+    <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"></div>
+    <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+      <h4 className="text-xl font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent flex items-center gap-2">
+        <span className="animate-bounce">🌱</span> Currently Learning
+      </h4>
+      <ul className="text-base text-gray-700 dark:text-gray-300 leading-relaxed space-y-3 mt-4">
+        {[
+          { icon: "🤖", text: "Machine Learning techniques for data-driven analysis" },
+          { icon: "📈", text: "Time Series Forecasting and Predictive Analytics" },
+          { icon: "📊", text: "Data Storytelling and visualization using BI tools" },
+          { icon: "☁️", text: "Advanced Cloud Computing and DevOps fundamentals" }
+        ].map((item, index) => (
+          <li key={index} className="flex items-start gap-3 group">
+            <span className="group-hover:scale-125 transition-transform">{item.icon}</span>
+            <span className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              {item.text}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+  </div>
+
                 </CardContent>
               </Card>
-            ))}
+            </div>
           </div>
-        </div>
 
-        {/* Interests Section */}
+          {/* Skills Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Skills & Technologies
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {skills.map((skillGroup, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+                  <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-600/10">
+                    <CardTitle className="text-lg bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      {skillGroup.category}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-6">
+                    <div className="flex flex-wrap gap-2">
+                      {skillGroup.items.map((skill, skillIndex) => (
+                        <Badge 
+                          key={skillIndex} 
+                          variant="secondary"
+                          className="animate-fadeIn hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:text-white transition-all duration-300"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Interests Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">Interests & Passions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -289,7 +360,7 @@ const About = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg">
-                  <a href="mailto:keshavraj_pore@example.com">
+                  <a href="mailto:poreg79@gmail.com">
                     <Mail className="mr-2 h-4 w-4" />
                     Send me an Email
                   </a>

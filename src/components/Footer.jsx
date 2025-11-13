@@ -16,8 +16,7 @@ const Footer = () => {
               <span className="font-bold text-xl">Keshavraj Pore</span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Data Enthusiast | Problem Solver. Passionate about Data Analytics, Databases, and Optimization. 
-              Teaching complex topics on YouTube and always learning, always sharing!
+              Data Enthusiast and Problem Solver passionate about Data Analytics, Databases, and Optimization. Always exploring smarter ways to turn data into meaningful insights.
             </p>
             <div className="flex space-x-4">
               <a
@@ -71,9 +70,7 @@ const Footer = () => {
           <p className="text-muted-foreground text-sm">
             © {currentYear} Keshavraj Pore. All rights reserved.
           </p>
-          <p className="text-muted-foreground text-sm flex items-center mt-2 sm:mt-0">
-            Made with <Heart size={16} className="mx-1 text-red-500" /> and React
-          </p>
+         
         </div>
       </div>
     </footer>
