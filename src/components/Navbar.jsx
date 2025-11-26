@@ -14,7 +14,8 @@ const Navbar = () => {
     { path: '/projects', label: 'Projects', icon: Code },
     { path: '/achievements', label: 'Achievements', icon: Trophy },
     { path: '/youtube', label: 'YouTube', icon: Youtube },
-    { path: '/sql-learning', label: 'SQL Learning', icon: Database },
+    { path: '/DSA', label: 'DSA', icon: Code },
+    {path: '/voicebillingapp', label: 'Voice Billing', icon: Server },
     { path: '/about', label: 'About', icon: User }
     
   ]

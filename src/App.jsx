@@ -14,6 +14,7 @@ import About from './pages/About'
 import './App.css'
 import PythonCompiler from './pages/PythonCompiler'
 import VoiceBillingApp from './pages/VoiceBillingApp'
+import DSAVideoPage from './pages/DSAVideoPage'
 
 function App() {
   
@@ -34,6 +35,7 @@ function App() {
               <Route path="/sqlnotes" element={<PythonCompiler />} />
               <Route path="/voicebillingapp" element={<VoiceBillingApp/>}/>
               <Route path="/about" element={<About />} />
+              <Route path="/DSA" element={<DSAVideoPage/>}/>
             </Routes>
           </main>
           <Footer />

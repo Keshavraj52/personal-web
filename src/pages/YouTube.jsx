@@ -148,7 +148,7 @@ const YouTube = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950 dark:to-orange-950">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950 dark:to-orange-950" style={{marginTop:24}}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Enhanced Header */}
         <div className="text-center mb-16">
