@@ -35,11 +35,11 @@ const Navbar = () => {
                   className="w-full h-full object-cover"
                   />
                 </div>
-                <span className="font-bold text-xl">Keshavraj Pore</span>
+                <span className="font-bold text-emerald-100 text-xl">Keshavraj Pore</span>
                 </Link>
 
                 {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center text-emerald-600 space-x-1">
             {navItems.map((item) => {
               const Icon = item.icon
               return (

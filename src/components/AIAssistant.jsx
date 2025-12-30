@@ -322,19 +322,12 @@ I'm currently seeking opportunities where I can apply my skills, learn from real
                 <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full border-2 border-white animate-pulse shadow-lg"></div>
               </div>
               <div className="flex-1 min-w-0">
-                <CardTitle className="text-base sm:text-lg font-bold truncate">AI Assistant</CardTitle>
+                <CardTitle className="text-base sm:text-lg font-bold truncate text-emerald-200">AI Assistant</CardTitle>
                 <p className="text-xs sm:text-sm opacity-90 truncate">Ask me about Keshavraj</p>
               </div>
             </div>
             <div className="flex items-center gap-1 flex-shrink-0">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8 text-white hover:bg-white/30 transition-all rounded-xl hover:scale-110"
-                onClick={() => setIsMinimized(!isMinimized)}
-              >
-                {isMinimized ? <Maximize2 className="h-4 w-4" /> : <Minimize2 className="h-4 w-4" />}
-              </Button>
+            
               <Button
                 variant="ghost"
                 size="icon"
@@ -383,7 +376,7 @@ I'm currently seeking opportunities where I can apply my skills, learn from real
                       
                       {/* Meme Image (only for bot messages) */}
                       {message.type === 'bot' && message.meme && (
-                        <div className="mb-2 sm:mb-3 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-700 shadow-inner">
+                        <div className="mb-2 sm:mb-3 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-700 shadow-inner text-emerald-600">
                           <img 
                             src={message.meme} 
                             alt={message.memeAlt || "Meme"}
@@ -395,7 +388,7 @@ I'm currently seeking opportunities where I can apply my skills, learn from real
                         </div>
                       )}
                       
-                      <p className="text-xs sm:text-sm leading-relaxed whitespace-pre-line break-words">
+                      <p className="text-xs sm:text-sm leading-relaxed whitespace-pre-line break-words text-emerald-600">
                         {message.content}
                       </p>
                       <p className={`text-[10px] sm:text-xs mt-1.5 sm:mt-2 ${
@@ -410,12 +403,12 @@ I'm currently seeking opportunities where I can apply my skills, learn from real
 
               {/* Typing Indicator */}
               {isTyping && (
-                <div className="flex justify-start animate-in slide-in-from-bottom-2 duration-300">
+                <div className="flex justify-start animate-in slide-in-from-bottom-2 duration-300 text-emerald-600">
                   <div className="flex items-start gap-2">
                     <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg">
                       <Bot className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
                     </div>
-                    <div className="bg-white dark:bg-slate-800 border-2 border-emerald-100 dark:border-emerald-900 rounded-2xl rounded-bl-md p-3 shadow-md">
+                    <div className="bg-white dark:bg-slate-800 border-2 text-emerald-600 border-emerald-100 dark:border-emerald-900 rounded-2xl rounded-bl-md p-3 shadow-md">
                       <div className="flex gap-1">
                         <div className="w-2 h-2 bg-emerald-500 rounded-full animate-bounce"></div>
                         <div className="w-2 h-2 bg-teal-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
@@ -428,7 +421,7 @@ I'm currently seeking opportunities where I can apply my skills, learn from real
             </div>
 
             {/* Input Area */}
-            <div className="p-3 sm:p-4 bg-white dark:bg-slate-900 border-t-2 border-emerald-100 dark:border-emerald-900">
+            <div className="p-3 sm:p-4 bg-white dark:bg-slate-900 border-t-2 border-emerald-100 dark:border-emerald-900 text-emerald-600">
               {/* Quick Actions */}
               <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-3">
                 {quickActions.map((action, index) => (

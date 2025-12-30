@@ -81,6 +81,13 @@ useEffect(() => {
   color: 'from-cyan-500 to-blue-500'
 },
 {
+  icon: Brain,
+  title: 'DSA Videos',
+  description: 'Explore my Data Structures and Algorithms video series on YouTube to enhance your problem-solving skills.',
+  link: '/DSA',
+  color: 'from-indigo-500 to-purple-500'
+},
+{
   icon: Server,
   title: 'MCP Servers',
   description: 'Explore my open-source MCP server projects and interactive dashboards for data visualization.',
@@ -112,18 +119,18 @@ useEffect(() => {
             
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold">
-                  <span className="text-emerald-400">Hi, I'm{' '}</span>
-                  <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-center sm:text-left">
+                  <span className="text-emerald-200">Hi, I'm{' '}</span>
+                  <span className="bg-gradient-to-r from-emerald-300 to-cyan-600 bg-clip-text text-transparent">
                     Keshavraj Pore
                   </span>
                 </h1>
-              <div className="max-w-2xl mx-auto text-justify sm:text-left px-4">
-  <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-[Inter] tracking-wide">
-    I'm an AI and Data Science student from Pune who loves solving real-world problems with data and automation. 
-    I'm passionate about Data Analytics and Data Science roles where I can turn insights into meaningful impact. 
-    I share my learning on YouTube, solve challenges on LeetCode, and contribute to open-source projects on GitHub. 
-    always exploring new ways to grow and build smarter solutions.
+              <div className="max-w-2xl mx-auto text-justify  sm:text-left px-4">
+  <p className="text-lg text-slate-300 leading-relaxed ">
+   Final-year Artificial Intelligence & Data Science undergraduate with strong problem-solving skills and hands-on experience in building automation-driven, data-backed systems. 
+I specialize in Python, Data Analytics, SQL, Machine Learning, and full-stack development, with projects spanning MCP-based university automation, voice-enabled billing systems, and analytics dashboards. 
+I actively share technical knowledge on YouTube, solve DSA & SQL problems on LeetCode, and build open-source solutions focused on scalability, privacy, and real-world impact.
+
   </p>
 </div>
 
