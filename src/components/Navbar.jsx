@@ -11,7 +11,7 @@ const Navbar = () => {
  
   const navItems = [
     { path: '/', label: 'Home', icon: User },
-    { path: '/projects', label: 'Projects', icon: Code },
+    { path: '/Githubprojects', label: 'Github', icon: Code },
     { path: '/achievements', label: 'Achievements', icon: Trophy },
     { path: '/youtube', label: 'YouTube', icon: Youtube },
     { path: '/DSA', label: 'DSA', icon: Code },

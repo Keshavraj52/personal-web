@@ -15,6 +15,7 @@ import './App.css'
 import PythonCompiler from './pages/PythonCompiler'
 import VoiceBillingApp from './pages/VoiceBillingApp'
 import DSAVideoPage from './pages/DSAVideoPage'
+import Portfolio from './pages/Portfolio'
 
 function App() {
   
@@ -26,7 +27,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/projects" element={<Projects />} />
+              <Route path="/Githubprojects" element={<Projects />} />
               <Route path="/achievements" element={<Achievements />} />
               <Route path="/youtube" element={<YouTube />} />
               <Route path="/sql-learning" element={<SQLLearning />} />
@@ -36,6 +37,7 @@ function App() {
               <Route path="/voicebillingapp" element={<VoiceBillingApp/>}/>
               <Route path="/about" element={<About />} />
               <Route path="/DSA" element={<DSAVideoPage/>}/>
+              <Route path="/projectsreal" element={<Portfolio />} />
             </Routes>
           </main>
           <Footer />
