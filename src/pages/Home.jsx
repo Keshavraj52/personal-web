@@ -204,7 +204,7 @@ const Home = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20" style={{marginTop: '3rem'}}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[calc(100vh-6rem)]">
 
             {/* Left Content */}
@@ -273,8 +273,8 @@ const Home = () => {
               {/* Social Links */}
               <div className="flex gap-4">
                 {[
-                  { icon: Github, href: 'https://github.com/yourusername', color: 'hover:text-slate-300' },
-                  { icon: Linkedin, href: 'https://linkedin.com/in/yourusername', color: 'hover:text-blue-400' },
+                  { icon: Github, href: 'https://github.com/keshavraj52', color: 'hover:text-slate-300' },
+                  { icon: Linkedin, href: 'https://www.linkedin.com/in/keshavraj-pore-b33873257/', color: 'hover:text-blue-400' },
                   { icon: Youtube, href: 'https://www.youtube.com/@Keshavrajpore', color: 'hover:text-red-500' },
                   { icon: Mail, href: '/about', color: 'hover:text-emerald-400' }
                 ].map((social, i) => (
@@ -325,7 +325,7 @@ const Home = () => {
                 <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full p-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500">
                   <div className="w-full h-full rounded-full overflow-hidden bg-slate-900 border-4 border-slate-900">
                     <img
-                      src="/images/profile photo.jpg"
+                      src="/images/keshavraj profile.jpg"
                       alt="Keshavraj Pore"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
@@ -334,7 +334,7 @@ const Home = () => {
 
                 {/* Floating Badge */}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-6 py-2 bg-slate-900 border border-emerald-500/50 rounded-full shadow-lg backdrop-blur-sm">
-                  <span className="text-emerald-400 font-medium text-sm">⚡ Open to Work</span>
+                  <span className="text-emerald-400 font-medium text-sm">Open to Work</span>
                 </div>
               </div>
 
@@ -343,13 +343,13 @@ const Home = () => {
                 {[
                   {
                     label: 'YouTube Subs',
-                    value: stats.youtubeSubscribers || '1K+',
+                    value: stats.youtubeSubscribers,
                     color: 'from-red-500 to-rose-500',
                     icon: Youtube
                   },
                   {
                     label: 'GitHub Repos',
-                    value: stats.githubRepos || '25+',
+                    value: stats.githubRepos,
                     color: 'from-emerald-500 to-cyan-500',
                     icon: Github
                   }
@@ -401,68 +401,7 @@ const Home = () => {
         </div>
 
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-slate-900 dark:text-slate-100">
-              Explore My Work
-            </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Discover my projects, achievements, educational content, and open-source contributions
-            </p>
-          </div>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon
-              return (
-                <Card
-                  key={index}
-                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700"
-                >
-                  <CardContent className="p-6">
-                    <div className="space-y-4">
-                      {/* Icon */}
-                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                        <Icon className="h-6 w-6 text-white" />
-                      </div>
-
-                      {/* Content */}
-                      <div>
-                        <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100">
-                          {feature.title}
-                        </h3>
-                        <p className="text-slate-600 dark:text-slate-400 mb-4">
-                          {feature.description}
-                        </p>
-
-                        {/* Learn More Link */}
-                        <Button
-                          asChild
-                          variant="ghost"
-                          className="group/btn p-0 h-auto text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300"
-                        >
-                          <Link to={feature.link}>
-                            Learn more
-                            <ArrowRight className="ml-1 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                          </Link>
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
+{/* Skills Section */}
       <section className="py-20 bg-white dark:bg-slate-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -540,6 +479,68 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-slate-50 dark:bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-slate-900 dark:text-slate-100">
+              Explore My Work
+            </h2>
+            <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+              Discover my projects, achievements, educational content, and open-source contributions
+            </p>
+          </div>
+
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => {
+              const Icon = feature.icon
+              return (
+                <Card
+                  key={index}
+                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700"
+                >
+                  <CardContent className="p-6">
+                    <div className="space-y-4">
+                      {/* Icon */}
+                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                        <Icon className="h-6 w-6 text-white" />
+                      </div>
+
+                      {/* Content */}
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100">
+                          {feature.title}
+                        </h3>
+                        <p className="text-slate-600 dark:text-slate-400 mb-4">
+                          {feature.description}
+                        </p>
+
+                        {/* Learn More Link */}
+                        <Button
+                          asChild
+                          variant="ghost"
+                          className="group/btn p-0 h-auto text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300"
+                        >
+                          <Link to={feature.link}>
+                            Learn more
+                            <ArrowRight className="ml-1 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      
 
 
       {/* Special Promotion Section */}
