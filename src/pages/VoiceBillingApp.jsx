@@ -621,7 +621,10 @@ ${billItems.map(item => {
                 )}
               </div>
             </div>
-            
+            <div className="text-center mt-6 ">
+                          <a href="/dashboard" className="text-blue-600 hover:underline mt-4 inline-block ">📊 डैशबोर्ड पर जाएं</a>
+
+            </div>
             {/* Instructions */}
             <div className="mt-6 bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">📝 आवाज़ कमांड के उदाहरण:</h3>
