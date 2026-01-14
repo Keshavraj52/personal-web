@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { ShoppingCart, Mic, MicOff, Download, Trash2, CreditCard, Volume2, Plus } from 'lucide-react';
-
+// ADD YOUR GOOGLE SHEETS API ENDPOINT HERE
+const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbxSA1g4kke1jYBSYqtp09PP_yiVw6LUArDoNzBZQheAHmSUQiAh1TDW_Jj2r80DWCZM/exec'; // <-- ADD YOUR DEPLOYMENT URL HERE
 // Product catalog with base price & unit
 const PRODUCTS = {
   'sugar': { price: 40, unit: 'kg' },
@@ -327,9 +328,35 @@ const VoiceBillingApp = () => {
     // In a real implementation, you'd use a QR code library
     return `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upiUrl)}`;
   };
+const downloadPDF = async () => {
+  // Prepare data for Google Sheets
+  const transactionData = billItems.map(item => ({
+    date: new Date().toLocaleDateString('en-IN'),
+    time: new Date().toLocaleTimeString('en-IN'),
+    product_name: item.display_hi, // Hindi name
+    quantity: item.quantity,
+    unit: UNIT_LABELS[item.unit].hi,
+    amount: item.total_price
+  }));
 
-  const downloadPDF = () => {
-    // For demo purposes, we'll create a simple text-based bill
+  try {
+    // Send to Google Sheets
+    const response = await fetch(SHEET_API_URL, {
+      method: 'POST',
+      mode: 'no-cors', // Important for Google Apps Script
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        transactions: transactionData,
+        total_amount: totalAmount
+      })
+    });
+
+    // Show success message
+    speakText('डेटा सफलतापूर्वक सेव हो गया');
+    
+    // Also download the text bill
     const billContent = `
 किराना बिल
 तारीख: ${new Date().toLocaleString('hi-IN')}
@@ -351,7 +378,11 @@ ${billItems.map(item => {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-  };
+  } catch (error) {
+    console.error('Error saving to sheet:', error);
+    speakText('डेटा सेव करने में त्रुटि');
+  }
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 p-4" style={{ margin: '64px' }}>

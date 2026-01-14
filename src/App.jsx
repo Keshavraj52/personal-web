@@ -16,6 +16,7 @@ import PythonCompiler from './pages/PythonCompiler'
 import VoiceBillingApp from './pages/VoiceBillingApp'
 import DSAVideoPage from './pages/DSAVideoPage'
 import Portfolio from './pages/Portfolio'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   
@@ -38,6 +39,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/DSA" element={<DSAVideoPage/>}/>
               <Route path="/projectsreal" element={<Portfolio />} />
+              <Route path="/Dashboard" element={<Dashboard />} />
             </Routes>
           </main>
           <Footer />
